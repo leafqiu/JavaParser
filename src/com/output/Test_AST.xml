@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CompilationUnit id="0" src="F:/workplace2/Test/src/Main.java">
+  <ImportDeclaration id="1" label="IMPORTS">
+    <QualifiedName id="5" label="NAME">
+      <QualifiedName id="6" label="QUALIFIER">
+        <SimpleName id="8" label="QUALIFIER">java</SimpleName>
+        <SimpleName id="9" label="NAME">io</SimpleName>
+      </QualifiedName>
+      <SimpleName id="7" label="NAME">File</SimpleName>
+    </QualifiedName>
+  </ImportDeclaration>
+  <ImportDeclaration id="2" label="IMPORTS">
+    <QualifiedName id="10" label="NAME">
+      <QualifiedName id="11" label="QUALIFIER">
+        <SimpleName id="13" label="QUALIFIER">java</SimpleName>
+        <SimpleName id="14" label="NAME">util</SimpleName>
+      </QualifiedName>
+      <SimpleName id="12" label="NAME">ArrayList</SimpleName>
+    </QualifiedName>
+  </ImportDeclaration>
+  <ImportDeclaration id="3" label="IMPORTS">
+    <QualifiedName id="15" label="NAME">
+      <QualifiedName id="16" label="QUALIFIER">
+        <SimpleName id="18" label="QUALIFIER">java</SimpleName>
+        <SimpleName id="19" label="NAME">util</SimpleName>
+      </QualifiedName>
+      <SimpleName id="17" label="NAME">List</SimpleName>
+    </QualifiedName>
+  </ImportDeclaration>
+  <TypeDeclaration id="4" label="TYPES">
+    <Modifier id="20" label="MODIFIERS">public</Modifier>
+    <SimpleName id="21" label="NAME">Main</SimpleName>
+    <FieldDeclaration id="22" label="BODY_DECLARATIONS">
+      <Modifier id="26" label="MODIFIERS">private</Modifier>
+      <Modifier id="27" label="MODIFIERS">static</Modifier>
+      <SimpleType id="28" label="TYPE">
+        <SimpleName id="30" label="NAME">String</SimpleName>
+      </SimpleType>
+      <VariableDeclarationFragment id="29" label="FRAGMENTS">
+        <SimpleName id="31" label="NAME">xmlFilePath</SimpleName>
+        <StringLiteral id="32" label="INITIALIZER">"UMLDataFile\\XML\\"</StringLiteral>
+      </VariableDeclarationFragment>
+    </FieldDeclaration>
+    <FieldDeclaration id="23" label="BODY_DECLARATIONS">
+      <Modifier id="33" label="MODIFIERS">private</Modifier>
+      <Modifier id="34" label="MODIFIERS">static</Modifier>
+      <SimpleType id="35" label="TYPE">
+        <SimpleName id="37" label="NAME">String</SimpleName>
+      </SimpleType>
+      <VariableDeclarationFragment id="36" label="FRAGMENTS">
+        <SimpleName id="38" label="NAME">xlsFilePath</SimpleName>
+        <StringLiteral id="39" label="INITIALIZER">"UMLDataFile\\XLS\\"</StringLiteral>
+      </VariableDeclarationFragment>
+    </FieldDeclaration>
+    <MethodDeclaration id="24" label="BODY_DECLARATIONS">
+      <Modifier id="40" label="MODIFIERS">public</Modifier>
+      <Modifier id="41" label="MODIFIERS">static</Modifier>
+      <PrimitiveType id="42" label="RETURN_TYPE2">void</PrimitiveType>
+      <SimpleName id="43" label="NAME">main</SimpleName>
+      <SingleVariableDeclaration id="44" label="PARAMETERS">
+        <ArrayType id="46" label="TYPE">
+          <SimpleType id="48" label="ELEMENT_TYPE">
+            <SimpleName id="50" label="NAME">String</SimpleName>
+          </SimpleType>
+          <Dimension id="49" label="DIMENSIONS"/>
+        </ArrayType>
+        <SimpleName id="47" label="NAME">args</SimpleName>
+      </SingleVariableDeclaration>
+      <Block id="45" label="BODY">
+        <VariableDeclarationStatement id="51" label="STATEMENTS">
+          <ArrayType id="53" label="TYPE">
+            <SimpleType id="55" label="ELEMENT_TYPE">
+              <SimpleName id="57" label="NAME">File</SimpleName>
+            </SimpleType>
+            <Dimension id="56" label="DIMENSIONS"/>
+          </ArrayType>
+          <VariableDeclarationFragment id="54" label="FRAGMENTS">
+            <SimpleName id="58" label="NAME">files</SimpleName>
+            <MethodInvocation id="59" label="INITIALIZER">
+              <SimpleName id="60" label="NAME">buildFileArray</SimpleName>
+            </MethodInvocation>
+          </VariableDeclarationFragment>
+        </VariableDeclarationStatement>
+        <EnhancedForStatement id="52" label="STATEMENTS">
+          <SingleVariableDeclaration id="61" label="PARAMETER">
+            <SimpleType id="64" label="TYPE">
+              <SimpleName id="66" label="NAME">File</SimpleName>
+            </SimpleType>
+            <SimpleName id="65" label="NAME">f</SimpleName>
+          </SingleVariableDeclaration>
+          <SimpleName id="62" label="EXPRESSION">files</SimpleName>
+          <Block id="63" label="BODY">
+            <ExpressionStatement id="67" label="STATEMENTS">
+              <MethodInvocation id="68" label="EXPRESSION">
+                <QualifiedName id="69" label="EXPRESSION">
+                  <SimpleName id="72" label="QUALIFIER">System</SimpleName>
+                  <SimpleName id="73" label="NAME">out</SimpleName>
+                </QualifiedName>
+                <SimpleName id="70" label="NAME">println</SimpleName>
+                <MethodInvocation id="71" label="ARGUMENTS">
+                  <SimpleName id="74" label="EXPRESSION">f</SimpleName>
+                  <SimpleName id="75" label="NAME">getName</SimpleName>
+                </MethodInvocation>
+              </MethodInvocation>
+            </ExpressionStatement>
+          </Block>
+        </EnhancedForStatement>
+      </Block>
+    </MethodDeclaration>
+    <MethodDeclaration id="25" label="BODY_DECLARATIONS">
+      <Modifier id="76" label="MODIFIERS">public</Modifier>
+      <Modifier id="77" label="MODIFIERS">static</Modifier>
+      <ArrayType id="78" label="RETURN_TYPE2">
+        <SimpleType id="81" label="ELEMENT_TYPE">
+          <SimpleName id="83" label="NAME">File</SimpleName>
+        </SimpleType>
+        <Dimension id="82" label="DIMENSIONS"/>
+      </ArrayType>
+      <SimpleName id="79" label="NAME">buildFileArray</SimpleName>
+      <Block id="80" label="BODY">
+        <VariableDeclarationStatement id="84" label="STATEMENTS">
+          <SimpleType id="92" label="TYPE">
+            <SimpleName id="94" label="NAME">File</SimpleName>
+          </SimpleType>
+          <VariableDeclarationFragment id="93" label="FRAGMENTS">
+            <SimpleName id="95" label="NAME">xlsdic</SimpleName>
+            <ClassInstanceCreation id="96" label="INITIALIZER">
+              <SimpleType id="97" label="TYPE">
+                <SimpleName id="99" label="NAME">File</SimpleName>
+              </SimpleType>
+              <SimpleName id="98" label="ARGUMENTS">xlsFilePath</SimpleName>
+            </ClassInstanceCreation>
+          </VariableDeclarationFragment>
+        </VariableDeclarationStatement>
+        <VariableDeclarationStatement id="85" label="STATEMENTS">
+          <SimpleType id="100" label="TYPE">
+            <SimpleName id="102" label="NAME">File</SimpleName>
+          </SimpleType>
+          <VariableDeclarationFragment id="101" label="FRAGMENTS">
+            <SimpleName id="103" label="NAME">xmldic</SimpleName>
+            <ClassInstanceCreation id="104" label="INITIALIZER">
+              <SimpleType id="105" label="TYPE">
+                <SimpleName id="107" label="NAME">File</SimpleName>
+              </SimpleType>
+              <SimpleName id="106" label="ARGUMENTS">xmlFilePath</SimpleName>
+            </ClassInstanceCreation>
+          </VariableDeclarationFragment>
+        </VariableDeclarationStatement>
+        <VariableDeclarationStatement id="86" label="STATEMENTS">
+          <ParameterizedType id="108" label="TYPE">
+            <SimpleType id="110" label="TYPE">
+              <SimpleName id="112" label="NAME">List</SimpleName>
+            </SimpleType>
+            <SimpleType id="111" label="TYPE_ARGUMENTS">
+              <SimpleName id="113" label="NAME">File</SimpleName>
+            </SimpleType>
+          </ParameterizedType>
+          <VariableDeclarationFragment id="109" label="FRAGMENTS">
+            <SimpleName id="114" label="NAME">filelist</SimpleName>
+            <ClassInstanceCreation id="115" label="INITIALIZER">
+              <ParameterizedType id="116" label="TYPE">
+                <SimpleType id="117" label="TYPE">
+                  <SimpleName id="119" label="NAME">ArrayList</SimpleName>
+                </SimpleType>
+                <SimpleType id="118" label="TYPE_ARGUMENTS">
+                  <SimpleName id="120" label="NAME">File</SimpleName>
+                </SimpleType>
+              </ParameterizedType>
+            </ClassInstanceCreation>
+          </VariableDeclarationFragment>
+        </VariableDeclarationStatement>
+        <IfStatement id="87" label="STATEMENTS">
+          <MethodInvocation id="121" label="EXPRESSION">
+            <SimpleName id="123" label="EXPRESSION">xlsdic</SimpleName>
+            <SimpleName id="124" label="NAME">isDirectory</SimpleName>
+          </MethodInvocation>
+          <Block id="122" label="THEN_STATEMENT">
+            <ExpressionStatement id="125" label="STATEMENTS">
+              <MethodInvocation id="129" label="EXPRESSION">
+                <QualifiedName id="130" label="EXPRESSION">
+                  <SimpleName id="133" label="QUALIFIER">System</SimpleName>
+                  <SimpleName id="134" label="NAME">out</SimpleName>
+                </QualifiedName>
+                <SimpleName id="131" label="NAME">println</SimpleName>
+                <InfixExpression id="132" label="ARGUMENTS">
+                  <StringLiteral id="135" label="LEFT_OPERAND">"directory: "</StringLiteral>
+                  <SimpleName id="136" label="RIGHT_OPERAND">xlsFilePath</SimpleName>
+                </InfixExpression>
+              </MethodInvocation>
+            </ExpressionStatement>
+            <VariableDeclarationStatement id="126" label="STATEMENTS">
+              <ArrayType id="137" label="TYPE">
+                <SimpleType id="139" label="ELEMENT_TYPE">
+                  <SimpleName id="141" label="NAME">String</SimpleName>
+                </SimpleType>
+                <Dimension id="140" label="DIMENSIONS"/>
+              </ArrayType>
+              <VariableDeclarationFragment id="138" label="FRAGMENTS">
+                <SimpleName id="142" label="NAME">filename</SimpleName>
+                <MethodInvocation id="143" label="INITIALIZER">
+                  <SimpleName id="144" label="EXPRESSION">xlsdic</SimpleName>
+                  <SimpleName id="145" label="NAME">list</SimpleName>
+                </MethodInvocation>
+              </VariableDeclarationFragment>
+            </VariableDeclarationStatement>
+            <VariableDeclarationStatement id="127" label="STATEMENTS">
+              <PrimitiveType id="146" label="TYPE">int</PrimitiveType>
+              <VariableDeclarationFragment id="147" label="FRAGMENTS">
+                <SimpleName id="148" label="NAME">count</SimpleName>
+                <NumberLiteral id="149" label="INITIALIZER">0</NumberLiteral>
+              </VariableDeclarationFragment>
+            </VariableDeclarationStatement>
+            <ForStatement id="128" label="STATEMENTS">
+              <VariableDeclarationExpression id="150" label="INITIALIZERS">
+                <PrimitiveType id="154" label="TYPE">int</PrimitiveType>
+                <VariableDeclarationFragment id="155" label="FRAGMENTS">
+                  <SimpleName id="156" label="NAME">i</SimpleName>
+                  <NumberLiteral id="157" label="INITIALIZER">0</NumberLiteral>
+                </VariableDeclarationFragment>
+              </VariableDeclarationExpression>
+              <InfixExpression id="151" label="EXPRESSION">
+                <SimpleName id="158" label="LEFT_OPERAND">i</SimpleName>
+                <NumberLiteral id="159" label="RIGHT_OPERAND">10</NumberLiteral>
+              </InfixExpression>
+              <PostfixExpression id="152" label="UPDATERS">
+                <SimpleName id="160" label="OPERAND">i</SimpleName>
+              </PostfixExpression>
+              <Block id="153" label="BODY">
+                <ExpressionStatement id="161" label="STATEMENTS">
+                  <Assignment id="162" label="EXPRESSION">
+                    <SimpleName id="163" label="LEFT_HAND_SIDE">count</SimpleName>
+                    <InfixExpression id="164" label="RIGHT_HAND_SIDE">
+                      <SimpleName id="165" label="LEFT_OPERAND">count</SimpleName>
+                      <NumberLiteral id="166" label="RIGHT_OPERAND">1</NumberLiteral>
+                    </InfixExpression>
+                  </Assignment>
+                </ExpressionStatement>
+              </Block>
+            </ForStatement>
+          </Block>
+        </IfStatement>
+        <IfStatement id="88" label="STATEMENTS">
+          <MethodInvocation id="167" label="EXPRESSION">
+            <SimpleName id="169" label="EXPRESSION">xmldic</SimpleName>
+            <SimpleName id="170" label="NAME">isDirectory</SimpleName>
+          </MethodInvocation>
+          <Block id="168" label="THEN_STATEMENT">
+            <ExpressionStatement id="171" label="STATEMENTS">
+              <MethodInvocation id="174" label="EXPRESSION">
+                <QualifiedName id="175" label="EXPRESSION">
+                  <SimpleName id="178" label="QUALIFIER">System</SimpleName>
+                  <SimpleName id="179" label="NAME">out</SimpleName>
+                </QualifiedName>
+                <SimpleName id="176" label="NAME">println</SimpleName>
+                <InfixExpression id="177" label="ARGUMENTS">
+                  <StringLiteral id="180" label="LEFT_OPERAND">"directory: "</StringLiteral>
+                  <SimpleName id="181" label="RIGHT_OPERAND">xmlFilePath</SimpleName>
+                </InfixExpression>
+              </MethodInvocation>
+            </ExpressionStatement>
+            <VariableDeclarationStatement id="172" label="STATEMENTS">
+              <ArrayType id="182" label="TYPE">
+                <SimpleType id="184" label="ELEMENT_TYPE">
+                  <SimpleName id="186" label="NAME">String</SimpleName>
+                </SimpleType>
+                <Dimension id="185" label="DIMENSIONS"/>
+              </ArrayType>
+              <VariableDeclarationFragment id="183" label="FRAGMENTS">
+                <SimpleName id="187" label="NAME">filename</SimpleName>
+                <MethodInvocation id="188" label="INITIALIZER">
+                  <SimpleName id="189" label="EXPRESSION">xmldic</SimpleName>
+                  <SimpleName id="190" label="NAME">list</SimpleName>
+                </MethodInvocation>
+              </VariableDeclarationFragment>
+            </VariableDeclarationStatement>
+            <EnhancedForStatement id="173" label="STATEMENTS">
+              <SingleVariableDeclaration id="191" label="PARAMETER">
+                <SimpleType id="194" label="TYPE">
+                  <SimpleName id="196" label="NAME">String</SimpleName>
+                </SimpleType>
+                <SimpleName id="195" label="NAME">name</SimpleName>
+              </SingleVariableDeclaration>
+              <SimpleName id="192" label="EXPRESSION">filename</SimpleName>
+              <Block id="193" label="BODY">
+                <VariableDeclarationStatement id="197" label="STATEMENTS">
+                  <PrimitiveType id="199" label="TYPE">int</PrimitiveType>
+                  <VariableDeclarationFragment id="200" label="FRAGMENTS">
+                    <SimpleName id="201" label="NAME">pos</SimpleName>
+                    <MethodInvocation id="202" label="INITIALIZER">
+                      <SimpleName id="203" label="EXPRESSION">name</SimpleName>
+                      <SimpleName id="204" label="NAME">lastIndexOf</SimpleName>
+                      <StringLiteral id="205" label="ARGUMENTS">"."</StringLiteral>
+                    </MethodInvocation>
+                  </VariableDeclarationFragment>
+                </VariableDeclarationStatement>
+                <IfStatement id="198" label="STATEMENTS">
+                  <InfixExpression id="206" label="EXPRESSION">
+                    <SimpleName id="208" label="LEFT_OPERAND">pos</SimpleName>
+                    <PrefixExpression id="209" label="RIGHT_OPERAND">
+                      <NumberLiteral id="210" label="OPERAND">1</NumberLiteral>
+                    </PrefixExpression>
+                  </InfixExpression>
+                  <Block id="207" label="THEN_STATEMENT">
+                    <VariableDeclarationStatement id="211" label="STATEMENTS">
+                      <SimpleType id="213" label="TYPE">
+                        <SimpleName id="215" label="NAME">File</SimpleName>
+                      </SimpleType>
+                      <VariableDeclarationFragment id="214" label="FRAGMENTS">
+                        <SimpleName id="216" label="NAME">nfile</SimpleName>
+                        <ClassInstanceCreation id="217" label="INITIALIZER">
+                          <SimpleType id="218" label="TYPE">
+                            <SimpleName id="220" label="NAME">File</SimpleName>
+                          </SimpleType>
+                          <InfixExpression id="219" label="ARGUMENTS">
+                            <SimpleName id="221" label="LEFT_OPERAND">xmlFilePath</SimpleName>
+                            <SimpleName id="222" label="RIGHT_OPERAND">name</SimpleName>
+                          </InfixExpression>
+                        </ClassInstanceCreation>
+                      </VariableDeclarationFragment>
+                    </VariableDeclarationStatement>
+                    <ExpressionStatement id="212" label="STATEMENTS">
+                      <MethodInvocation id="223" label="EXPRESSION">
+                        <SimpleName id="224" label="EXPRESSION">filelist</SimpleName>
+                        <SimpleName id="225" label="NAME">add</SimpleName>
+                        <SimpleName id="226" label="ARGUMENTS">nfile</SimpleName>
+                      </MethodInvocation>
+                    </ExpressionStatement>
+                  </Block>
+                </IfStatement>
+              </Block>
+            </EnhancedForStatement>
+          </Block>
+        </IfStatement>
+        <VariableDeclarationStatement id="89" label="STATEMENTS">
+          <PrimitiveType id="227" label="TYPE">int</PrimitiveType>
+          <VariableDeclarationFragment id="228" label="FRAGMENTS">
+            <SimpleName id="229" label="NAME">size</SimpleName>
+            <MethodInvocation id="230" label="INITIALIZER">
+              <SimpleName id="231" label="EXPRESSION">filelist</SimpleName>
+              <SimpleName id="232" label="NAME">size</SimpleName>
+            </MethodInvocation>
+          </VariableDeclarationFragment>
+        </VariableDeclarationStatement>
+        <VariableDeclarationStatement id="90" label="STATEMENTS">
+          <ArrayType id="233" label="TYPE">
+            <SimpleType id="235" label="ELEMENT_TYPE">
+              <SimpleName id="237" label="NAME">String</SimpleName>
+            </SimpleType>
+            <Dimension id="236" label="DIMENSIONS"/>
+          </ArrayType>
+          <VariableDeclarationFragment id="234" label="FRAGMENTS">
+            <SimpleName id="238" label="NAME">t</SimpleName>
+            <ArrayCreation id="239" label="INITIALIZER">
+              <ArrayType id="240" label="TYPE">
+                <SimpleType id="242" label="ELEMENT_TYPE">
+                  <SimpleName id="244" label="NAME">String</SimpleName>
+                </SimpleType>
+                <Dimension id="243" label="DIMENSIONS"/>
+              </ArrayType>
+              <NumberLiteral id="241" label="DIMENSIONS">5</NumberLiteral>
+            </ArrayCreation>
+          </VariableDeclarationFragment>
+        </VariableDeclarationStatement>
+        <ReturnStatement id="91" label="STATEMENTS">
+          <CastExpression id="245" label="EXPRESSION">
+            <ArrayType id="246" label="TYPE">
+              <SimpleType id="248" label="ELEMENT_TYPE">
+                <SimpleName id="250" label="NAME">File</SimpleName>
+              </SimpleType>
+              <Dimension id="249" label="DIMENSIONS"/>
+            </ArrayType>
+            <MethodInvocation id="247" label="EXPRESSION">
+              <SimpleName id="251" label="EXPRESSION">filelist</SimpleName>
+              <SimpleName id="252" label="NAME">toArray</SimpleName>
+              <ArrayCreation id="253" label="ARGUMENTS">
+                <ArrayType id="254" label="TYPE">
+                  <SimpleType id="256" label="ELEMENT_TYPE">
+                    <SimpleName id="258" label="NAME">File</SimpleName>
+                  </SimpleType>
+                  <Dimension id="257" label="DIMENSIONS"/>
+                </ArrayType>
+                <SimpleName id="255" label="DIMENSIONS">size</SimpleName>
+              </ArrayCreation>
+            </MethodInvocation>
+          </CastExpression>
+        </ReturnStatement>
+      </Block>
+    </MethodDeclaration>
+  </TypeDeclaration>
+</CompilationUnit>
